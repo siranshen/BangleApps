@@ -1,7 +1,7 @@
 {
   "id": "siransclk",
   "name": "Siran's Clock",
-  "version": "0.01",
+  "version": "0.02",
   "description": "A simple clock using the bold Anton font.",
   "icon": "app.png",
   "screenshots": [{"url":"screenshot.png"}],
