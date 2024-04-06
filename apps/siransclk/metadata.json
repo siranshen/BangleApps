@@ -1,0 +1,16 @@
+{
+  "id": "siransclk",
+  "name": "Siran's Clock",
+  "version": "0.01",
+  "description": "A simple clock using the bold Anton font.",
+  "icon": "app.png",
+  "screenshots": [{"url":"screenshot.png"}],
+  "type": "clock",
+  "tags": "clock",
+  "supports": ["BANGLEJS2"],
+  "allow_emulator": true,
+  "storage": [
+    {"name":"siransclk.app.js","url":"app.js"},
+    {"name":"siransclk.img","url":"app-icon.js","evaluate":true}
+  ]
+}
