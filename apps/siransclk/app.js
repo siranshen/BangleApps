@@ -29,22 +29,26 @@ let draw = function() {
   }, 60000 - (Date.now() % 60000));
 };
 
-Bangle.on('tap', function(data) {
-  if (data.double) {
+// Check for source code: https://github.com/espruino/Espruino/blob/master/libs/js/banglejs/Bangle_setUI_Q3.js
+Bangle.setUI({
+  mode: "custom",
+  clock: 1,
+  btn: function(n) {
     Bangle.buzz(100);
     NRF.updateServices({
       "6e400001b5a3f393e0a9e50e24dcca9e": {
         "6e400003b5a3f393e0a9e50e24dcca9e": {
-          value : "tap",
+          value : "btn",
           notify: true,
         }
       }
     });
-  }
-});
-
-Bangle.setUI({
-  mode: "clock",
+  },
+  swipe : function(dirLR, dirUD) {
+    if (dirUD == 1) {
+      Bangle.showLauncher();
+    }
+  },
   remove: function() {
     // Called to unload all of the clock app
     if (drawTimeout) clearTimeout(drawTimeout);
