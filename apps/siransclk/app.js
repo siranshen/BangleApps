@@ -34,7 +34,6 @@ Bangle.setUI({
   mode: "custom",
   clock: 1,
   btn: function(n) {
-    Bangle.buzz(100);
     NRF.updateServices({
       "6e400001b5a3f393e0a9e50e24dcca9e": {
         "6e400003b5a3f393e0a9e50e24dcca9e": {
@@ -43,6 +42,7 @@ Bangle.setUI({
         }
       }
     });
+    Bangle.buzz(80);
   },
   swipe : function(dirLR, dirUD) {
     if (dirUD == 1) {
